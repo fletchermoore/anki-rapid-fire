@@ -29,7 +29,7 @@ def revisedAnswerCard(self, card, ease):
     entries = self.col.db.all(
             "select ease from revlog where cid = ?", card.id)
     misses = missCount(entries)
-    if misses > 2:
+    if misses > 5:
         tooltip("To the back of the bus!")
         self.forgetCards([card.id])
         self.sortCards([card.id]) # set due to 1 (back of the bus!)
