@@ -2,6 +2,8 @@
 
 Add-on for Anki 2.1
 
+** This is NOT working currently! **
+
 The goal of this project is the help you learn unordered flashcards faster.
 
 Imagine you have a deck of 500 vocabulary words. Some of them will be easier than
