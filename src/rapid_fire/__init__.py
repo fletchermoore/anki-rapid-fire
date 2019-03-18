@@ -30,10 +30,12 @@ def revisedAnswerCard(self, card, ease):
             "select ease from revlog where cid = ?", card.id)
     misses = missCount(entries)
     if misses > 5:
-        tooltip("To the back of the bus!")
-        self.forgetCards([card.id])
-        self.sortCards([card.id]) # set due to 1 (back of the bus!)
-        self.newCount += 1
+        pass
+        #tooltip("To the back of the bus!", period=1000)
+        #self.forgetCards([card.id])
+        #self.sortCards([card.id]) # set due to 0 (back of the bus!)
+        #self.newCount += 1
+        #self.lrnCount -= 1
     #showText(str(entries) + " " + str(misses))
 
 sched.Scheduler.answerCard = revisedAnswerCard
