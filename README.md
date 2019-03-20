@@ -22,7 +22,6 @@ change the experimental scheduler.
 
 **Warning: This will  reset the data on your _lapsed_ cards as well
 
-## Caution
 
 
 
