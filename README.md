@@ -2,8 +2,9 @@
 
 Add-on for Anki 2.1
 
----
-I am not developing this further, as I don't think the concept is sound. I am leaving the code here for the interested. From trying this out, I think it ultimately prevents you from learning cards above a certain difficulty by not letting you see them enough times in a session. So I have abandoned this idea.
+
+**I am not developing this further, as I don't think the concept is sound. I am leaving the code here for the interested. From trying this out, I think it ultimately prevents you from learning cards above a certain difficulty by not letting you see them enough times in a session. So I have abandoned this idea.**
+
 ---
 
 The goal of this project is the help you learn unordered flashcards faster.
