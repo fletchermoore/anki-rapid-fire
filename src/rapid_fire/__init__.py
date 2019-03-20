@@ -44,6 +44,7 @@ def removeFromLrnQueue(scheduler, card):
 
 
 def revisedAnswerCard(self, card, ease):
+    tolerance = 10 # number of times you are allowed to get it wrong
     oldAnswerCard(self, card, ease)
     entries = self.col.db.all(
             "select ease, type, ivl, lastIvl from revlog where cid = ?", card.id)
@@ -51,8 +52,8 @@ def revisedAnswerCard(self, card, ease):
     # if 5, 10, 15, etc misses in a row
     # if the reset new card comes up again, and we miss it again, we are then at 6 in a row
     # we don't want to get reset immediately in that case, but rather wait til we miss it 10 times, etc
-    if misses % 5 == 0 and misses > 0:
-        tooltip("To the back of the bus! Miss #" + str(misses), period=1500)
+    if misses % tolerance == 0 and misses > 0:
+        #tooltip("To the back of the bus! Miss #" + str(misses), period=1500)
         # reset the card
         self.forgetCards([card.id])
         # even though we have rescheduled the card, its id is still in
